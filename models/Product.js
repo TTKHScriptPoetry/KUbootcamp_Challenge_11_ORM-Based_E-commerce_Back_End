@@ -10,14 +10,48 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
-  },
+    id: {
+      type: DataTypes.INTEGER,  // use the special Sequelize DataTypes object provide what type of data it is
+      allowNull: false,    // this is the equivalent of SQL's `NOT NULL` option
+      primaryKey: true,    // instruct that this is the Primary Key
+      autoIncrement: true  // turn on auto increment
+    },
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      // Validates that the value is a decimal
+      validate: {
+        isDecimal: true
+      }
+    }, 
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 10,
+      // validate that the value is numeric
+      validate: {
+        isNumeric: true
+      }
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references:{
+        model: 'category',
+        key: 'id'
+     }
+    }
+  },  // end of 1st object  
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'product',
-  }
+  }  // end of 2nd object  
 );
 
 module.exports = Product;
