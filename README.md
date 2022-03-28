@@ -7,7 +7,7 @@
  
 ##### Project Description:
 ---------------------------------------------------------------------------------------------------------
-##### This project expects one to be able to utilize Express.js API and configure it to use Sequelize as an ORM layer for interacting with the underlined MySQL Database to build the back end of an e-commerce site. There will be a walkthrough video (2 clips) as part of the end result that demonstrates the site's functionality involve products, categories, and tags via Insomnia interface that covers all the RESTful API CRUD endpoints
+##### This project expects one to be able to utilize Express.js API and configure it to use Sequelize as an ORM layer for interacting with the underlined MySQL Database to build the back end of an e-commerce site. The project expects an approriate safeguard machanism for database's connection credentials such as dotenv configuration along with MYSQL2 for making the connection-string possible. There will be a walkthrough video (2 clips) as part of the end-result that demonstrates the site's functionality which involve products, categories, and tags via Insomnia interface that covers all the RESTful API CRUD endpoints
 ---------------------------------------------------------------------------------------------------------
 ##### Links to Walkthrough Video:   
 ###### [**Part 1** Sequelize Multi Model Creations Reflected in Database with Seeding Test-Data Demo](https://drive.google.com/file/d/1cFbCTfwOPsQSRREuIF54YgO2J3NQllTO/view?usp=sharing) (Downloadable for optimal view)
